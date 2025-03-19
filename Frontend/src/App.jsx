@@ -12,7 +12,7 @@ function App() {
         formData.append('pdf', file);
 
         try {
-            const response = await axios.post('http://localhost:3000/upload', formData, {
+            const response = await axios.post('https://pdf-extractor-backend-3xuv.onrender.com/upload', formData, {
                 headers: { 'Content-Type': 'multipart/form-data' },
             });
             setTable(response.data.table);
